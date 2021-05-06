@@ -19,7 +19,7 @@ def main():
  PORT = 8080      # The port used by the server
 
  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect(('', PORT))
+    s.connect((HOST, PORT))
 
     
     # TODO: Get user input and send it to the server using your TCP socket
