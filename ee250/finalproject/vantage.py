@@ -35,7 +35,7 @@ def main():
     s.sendall(user_input.encode())
     ts = TimeSeries(key=api_key, output_format='pandas')
     data, meta_data = ts.get_intraday(symbol=user_input,interval='1min', outputsize='full')
-    print(data.loc['2021-05-06'])
+    print(data)
     data['4. close'].plot()
     plt.title('Intraday Times Series for the ' + user_input +' stock (1 min)')
     plt.show()
