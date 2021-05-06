@@ -10,8 +10,10 @@ import socket
 def main():
     
     # TODO: Create a socket and connect it to the server at the designated IP and port
- HOST = '10.211.55.4'  # The server's hostname or IP address
- PORT = 49552      # The port used by the server
+ #HOST = '10.211.55.4'  # The server's hostname or IP address
+ #PORT = 49552      # The port used by the server
+ HOST = '20.64.240.125'  # The server's hostname or IP address
+ PORT = 8080
 
  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
