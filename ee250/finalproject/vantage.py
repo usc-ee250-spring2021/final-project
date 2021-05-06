@@ -5,7 +5,7 @@ import requests
 # TODO: Sign up for an API key
 api_key = '2CGM6KNUEZ0KQUSL'  # AlphaVantage API Key
 
-from .alphavantage import AlphaVantage as av
+#from .alphavantage import AlphaVantage as av
 
 from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
