@@ -37,7 +37,7 @@ def main():
     data, meta_data = ts.get_intraday(symbol=user_input,interval='1min', outputsize='full')
     #print(data[0])
     data['4. close'].plot()
-    plt.title('Intraday Times Series for the' + user_input +' stock (1 min)')
+    plt.title('Intraday Times Series for the ' + user_input +' stock (1 min)')
     plt.show()
     # TODO: Receive a response from the server and close the TCP connection
     response = s.recv(1024)
