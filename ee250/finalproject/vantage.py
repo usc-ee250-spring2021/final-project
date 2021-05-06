@@ -11,7 +11,8 @@ from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 
 ts = TimeSeries(key=api_key, output_format='json')
-data, meta_data = ts.get_intraday(symbol='AAPL',interval='1min', outputsize='full')
-data['close'].plot()
-plt.title('Intraday Times Series for the AAPL stock (1 min)')
-plt.show()
+data = ts.get_intraday(symbol='AAPL',interval='1min', outputsize='full')
+print(data)
+#data['close'].plot()
+#plt.title('Intraday Times Series for the AAPL stock (1 min)')
+#plt.show()
