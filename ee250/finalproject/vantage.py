@@ -35,8 +35,10 @@ def main():
     s.sendall(user_input.encode())
     ts = TimeSeries(key=api_key, output_format='pandas')
     data, meta_data = ts.get_intraday(symbol=user_input,interval='1min', outputsize='full')
-    print(data.loc['2021-05-05', '4. close'])
+    #print(data.loc['2021-05-05', '4. close'])
     data['4. close'].plot()
+    market = data.loc['2021-05-05', '4. close'].agg({'4. close': max})
+    print(market)
     plt.title('Intraday Times Series for the ' + user_input +' stock (1 min)')
     plt.show()
     # TODO: Receive a response from the server and close the TCP connection
