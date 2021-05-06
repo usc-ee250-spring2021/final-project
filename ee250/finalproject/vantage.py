@@ -10,9 +10,9 @@ api_key = '2CGM6KNUEZ0KQUSL'  # AlphaVantage API Key
 from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 
-ts = TimeSeries(key=api_key, output_format='json')
+ts = TimeSeries(key=api_key, output_format='pandas')
 data = ts.get_intraday(symbol='AAPL',interval='1min', outputsize='full')
 #print(data)
-data[0].plot()
+data['4. close'].plot()
 plt.title('Intraday Times Series for the AAPL stock (1 min)')
 plt.show()
