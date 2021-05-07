@@ -41,7 +41,8 @@ def main():
     plt.title('Intraday Times Series for the ' + user_input +' stock (1 min)')
     plt.show()
     # TODO: Receive a response from the server and close the TCP connection
-    s.sendall(market)
+    string mkt = market
+    s.sendall(mkt)
     response = s.recv(1024)
     print(repr(response.decode()))
     s.close()
