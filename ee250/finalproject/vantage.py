@@ -3,14 +3,6 @@ from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 import socket
 
-"""
-Server receiver buffer is char[256]
-If correct, the server will send a message back to you saying "I got your message"
-Write your socket client code here in python
-Establish a socket connection -> send a short message -> get a message back -> ternimate
-use python "input->" function, enter a line of a few letters, such as "abcd"
-"""
-
 api_key = '2CGM6KNUEZ0KQUSL'  # AlphaVantage API Key
 
 #from .alphavantage import AlphaVantage as av
@@ -51,8 +43,5 @@ def main():
 if __name__ == '__main__':
     main()
 
-# OpenWeatherMap API: https://openweathermap.org/current
-
-# TODO: Sign up for an API key
 
 
