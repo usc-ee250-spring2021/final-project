@@ -42,7 +42,7 @@ def main():
     plt.show()
     # TODO: Receive a response from the server and close the TCP connection
     string mkt = market
-    s.sendall(mkt)
+    s.sendall(mkt.encode())
     response = s.recv(1024)
     print(repr(response.decode()))
     s.close()
