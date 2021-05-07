@@ -23,7 +23,7 @@ def main():
 
     
     # TODO: Get user input and send it to the server using your TCP socket
-    user_input = input("Enteer the name (symbol) of the stock you want to see data for (ie AAPL, MSFT, BTC): ")
+    user_input = input("Enter the name (symbol) of the stock you want to see data for (ie AAPL, MSFT, BTC): ")
     ts = TimeSeries(key=api_key, output_format='pandas')
     data, meta_data = ts.get_intraday(symbol=user_input,interval='1min', outputsize='full')
     #print(data.loc['2021-05-05', '4. close'])
