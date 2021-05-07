@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 	n = read(newsockfd,buffer,255);
         if (n < 0) 
             error("ERROR reading from socket");
-        printf("Here is the highest price at close for today: %s\n",buffer);
+        printf("Here is the highest price at close for today: %s\n",&buffer[10]);
         n = write(newsockfd,"Highest price of the day found",18);
         if (n < 0) 
             error("ERROR writing to socket");
